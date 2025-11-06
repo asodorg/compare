@@ -1,1 +1,1 @@
-# compare
+# @asod/compare
