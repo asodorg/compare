@@ -96,6 +96,7 @@ export default [
         },
       ],
       'no-redeclare': 'off',
+      'no-undef': 'off',
       'no-unused-vars': 'off',
     },
   },
