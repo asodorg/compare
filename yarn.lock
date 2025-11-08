@@ -9,6 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asod/compare@workspace:."
   dependencies:
+    "@asod/core": "npm:^0.1.0-canary.0"
     "@commitlint/cli": "npm:^18.2.0"
     "@commitlint/config-conventional": "npm:^18.1.0"
     "@swc/cli": "npm:^0.5.2"
@@ -28,6 +29,13 @@ __metadata:
     typescript: "npm:^5.7.2"
   languageName: unknown
   linkType: soft
+
+"@asod/core@npm:^0.1.0-canary.0":
+  version: 0.1.0-canary.0
+  resolution: "@asod/core@npm:0.1.0-canary.0"
+  checksum: 10c0/34e150e08ae9bc330b3c60dd335a96889a0ba2da149a458204c11ed6ba7248b6abf7c401a522e5300bff3658c121250a47406a25877ed59a5053b31bf28cdad1
+  languageName: node
+  linkType: hard
 
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.27.1":
   version: 7.27.1

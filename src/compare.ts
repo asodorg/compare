@@ -1,20 +1,12 @@
-type Primitive = number | bigint | string | symbol | boolean | null | undefined;
-type AnyObject = Record<string | symbol | number, any>;
-
-type Predicate<TA = unknown, TB = TA> = (a: TA, b: TB) => number;
-type Comparator = <TA = unknown, TB = TA>(
-  a: TA,
-  b: TB,
-  predicate?: Predicate<TA, TB>,
-) => number;
+import ASOD from '@asod/core';
 
 const STRING_PRIMITIVE_METHOD_NAMES = ['toString', 'valueOf'];
 
-const isObject = (value: unknown): value is AnyObject =>
+const isObject = (value: unknown): value is ASOD.Object =>
   typeof value === 'object' && value !== null;
 
 /** @ref ECMA-262 */
-const ordinaryToString = (value: AnyObject): Primitive => {
+const ordinaryToString = (value: ASOD.Object): ASOD.Primitive => {
   for (const name of STRING_PRIMITIVE_METHOD_NAMES) {
     if (typeof value[name] === 'function') {
       const primitive = value[name]();
@@ -42,7 +34,7 @@ const toString = (value: unknown): string => {
       const toPrimitive =
         Symbol.toPrimitive in value ? value[Symbol.toPrimitive] : undefined;
 
-      const primitive: Primitive =
+      const primitive: ASOD.Primitive =
         typeof toPrimitive === 'function'
           ? toPrimitive('string')
           : ordinaryToString(value);
@@ -98,7 +90,7 @@ const isLessThan = (a: string, b: string): boolean => {
  *
  * @ref ECMA-262
  */
-const compare: Comparator = (a, b, predicate) => {
+const compare: ASOD.Comparator = (a, b, predicate) => {
   if (a === undefined && b === undefined) return 0;
   if (a === undefined) return 1;
   if (b === undefined) return -1;
@@ -113,5 +105,5 @@ const compare: Comparator = (a, b, predicate) => {
   return 0;
 };
 
-export { compare, type Predicate, type Comparator };
+export { compare };
 export default compare;

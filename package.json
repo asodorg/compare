@@ -13,11 +13,11 @@
   "bugs": {
     "url": "https://github.com/asodorg/compare/issues"
   },
-  "main": "dist/index.js",
+  "main": "dist/compare.js",
   "files": [
     "dist/**/*"
   ],
-  "exports": "./dist/index.js",
+  "exports": "./dist/compare.js",
   "scripts": {
     "build": "yarn build:swc && yarn build:tsc",
     "build:swc": "swc src -d dist --strip-leading-paths",
@@ -54,5 +54,8 @@
   "volta": {
     "node": "20.19.5",
     "yarn": "4.10.3"
+  },
+  "dependencies": {
+    "@asod/core": "^0.1.0-canary.0"
   }
 }
