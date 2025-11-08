@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@asod/compare@workspace:."
   dependencies:
-    "@asod/core": "npm:^0.1.0-canary.0"
+    "@asod/core": "npm:^0.1.0-canary.1"
     "@commitlint/cli": "npm:^18.2.0"
     "@commitlint/config-conventional": "npm:^18.1.0"
     "@swc/cli": "npm:^0.5.2"
@@ -30,10 +30,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@asod/core@npm:^0.1.0-canary.0":
-  version: 0.1.0-canary.0
-  resolution: "@asod/core@npm:0.1.0-canary.0"
-  checksum: 10c0/34e150e08ae9bc330b3c60dd335a96889a0ba2da149a458204c11ed6ba7248b6abf7c401a522e5300bff3658c121250a47406a25877ed59a5053b31bf28cdad1
+"@asod/core@npm:^0.1.0-canary.1":
+  version: 0.1.0-canary.1
+  resolution: "@asod/core@npm:0.1.0-canary.1"
+  checksum: 10c0/e68e29220eac71723a5d15e0e9198de2ca58ce52a3f5b692cfb8451e3fdeb22df495a0b15dfdf09bb26919fc0b2da4f63beb72f0bbe03774043216f33573a5a2
   languageName: node
   linkType: hard
 
