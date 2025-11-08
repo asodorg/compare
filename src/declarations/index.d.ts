@@ -1,5 +1,3 @@
-/// <reference path="global.d.ts" />
-
 import ASOD from '@asod/core';
 
 declare module '@asod/core' {
