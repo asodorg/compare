@@ -27,7 +27,7 @@ jobs:
         run: npm run test
 
       - name: Build
-        run: npm run build:swc && npm run build:tsc
+        run: npm run build:js && npm run build:ts
 
       - name: Publish
         run: npm publish --provenance --access public

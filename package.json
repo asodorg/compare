@@ -19,9 +19,9 @@
   ],
   "exports": "./dist/compare.js",
   "scripts": {
-    "build": "yarn build:swc && yarn build:tsc",
-    "build:swc": "swc src -d dist --strip-leading-paths",
-    "build:tsc": "tsc",
+    "build": "yarn build:js && yarn build:ts",
+    "build:js": "swc src -d dist --strip-leading-paths --ignore \"node_modules,**/*.test.ts,**/*.d.ts\"",
+    "build:ts": "tsc && mkdir -p dist && find src -name \"*.d.ts\" -exec cp {} dist/ \\;",
     "lint": "eslint ./src/**/*.ts -c ./eslint.config.mjs",
     "lint:fix": "yarn lint --fix && yarn format:fix",
     "lint:strict": "yarn lint --max-warnings=0 && yarn format",
