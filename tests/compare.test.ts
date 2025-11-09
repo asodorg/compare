@@ -1,4 +1,4 @@
-import defaultCompare, { compare } from '../src/compare';
+import defaultCompare, { compare } from '../src';
 
 describe('compare', () => {
   it('should default function be exported', () => {

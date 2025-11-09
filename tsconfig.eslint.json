@@ -3,10 +3,9 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.cts",
-    "src/**/*.d.ts",
     "tests/**/*.ts",
     "tests/**/*.cts",
-    "tests/**/*.d.ts",
+    "**/*.d.ts",
     "*.js",
     "*.cjs",
     "*.mjs",

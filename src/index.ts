@@ -1,4 +1,4 @@
-import ASOD from '@asod/core';
+import ASOD from './core';
 
 const STRING_PRIMITIVE_METHOD_NAMES = ['toString', 'valueOf'];
 
